@@ -15,14 +15,17 @@ const show = (req,res) =>{
    // res.json("leggiamo l'elemento con id " +postid );
    const result = postList.find( curItem =>  curItem.id=== postid );
 
-   res.send(result);
+   console.log(result);
 
    if(result === undefined){
-    res.json("hai la 104");
-    res.statusCode = 404;
+    
+    res.sendStatus(404);
+   }else{
+
+    res.json(result);
    }
 
-   res.json(postList[0]);
+   
 };
 
 const create = (req,res) => {
@@ -45,7 +48,8 @@ const modify = (req,res) => {
 
 const destroy = (req,res) => {
 
-    const postid = req.params.id;
+    const postid = parseInt(req.params.id);
+    
     res.json("elimino l'elemento con id " +postid);
 };
 
