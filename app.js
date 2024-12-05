@@ -3,7 +3,7 @@ const app = express();
 const port = 3001;
 const postRouter = require("./routers/posts")
 
-
+app.use(express.json());
 app.use("/posts", postRouter);
 
 app.use(express.static(`public`));

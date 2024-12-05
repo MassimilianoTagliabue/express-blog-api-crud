@@ -30,8 +30,17 @@ const show = (req, res) => {
 
 const create = (req, res) => {
 
-    res.json("aggiungo un nuovo elemento");
+    const newPost = req.body;
+    
+    newPost.id = postList[postList.length - 1].id + 1; //prossimo ID
+
+    
+    postList.push(newPost);    
+    
+    console.log(newPost);
+    res.json(postList);
 };
+
 
 const update = (req, res) => {
 
@@ -45,6 +54,7 @@ const modify = (req, res) => {
     const postid = req.params.id;
     res.json("modifichiamo gli specifici dati dell'elemento con id " + postid);
 };
+
 
 const destroy = (req, res) => {
 
