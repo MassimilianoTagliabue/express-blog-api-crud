@@ -34,17 +34,26 @@ const create = (req, res) => {
     
     newPost.id = postList[postList.length - 1].id + 1; //prossimo ID
 
-    
     postList.push(newPost);    
     
     console.log(newPost);
-    res.json(postList);
+
+    res.sendStatus(201);
 };
 
 
 const update = (req, res) => {
 
-    const postid = req.params.id;
+    const postid = parseInt(req.params.id);
+    const updatePost = req.body;
+    const findPost = postList.findIndex(curItem => curItem.id === postid);
+    
+
+    updatePost.id = postid;
+    postList[findPost] = updatePost;
+    
+    console.log(postList);
+    
     res.json("modifico i dati dell'elemento con id " + postid);
 
 };
