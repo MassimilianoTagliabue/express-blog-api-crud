@@ -4,7 +4,7 @@ const posts = [
         "titolo": "I migliori consigli per una dieta sana",
         "contenuto": "Una dieta sana è fondamentale per il benessere del nostro corpo. Mangiare frutta, verdura e cibi integrali aiuta a mantenere il giusto equilibrio nutrizionale.",
         "immagine": "./images/ciambellone.jpeg",
-        "tags": ["salute", "alimentazione", "benessere", "dieta", "consigli"]
+        "tags": ["salute", "alimentazione", "benessere", "dieta", "lavoro"]
     },
     {
         id : 2,
@@ -32,7 +32,7 @@ const posts = [
         "titolo": "I segreti della fotografia professionale",
         "contenuto": "Scopri i trucchi per ottenere scatti perfetti: dalla scelta della luce alla composizione dell'immagine. La pratica e la tecnica sono essenziali per migliorare la tua fotografia.",
         "immagine": "./images/torta_paesana.jpeg",
-        "tags": ["fotografia", "arte", "tecnica", "scatti", "creatività"]
+        "tags": ["fotografia", "arte", "tecnica", "scatti", "creatività","lavoro"]
     }
 ];
 
